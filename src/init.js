@@ -22,8 +22,12 @@ $(document).ready(function() {
     // make a dancer with a random position
     
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(), 250
+      Math.floor(Math.random() * (800 - 500) + 500),
+      Math.floor(Math.random() * (1000 - 100) + 100), 250
+    
+    
+      // $('body').height() * Math.random(),
+      // $('body').width() * Math.random(), 250
       // Math.random() * 1000
     );
     $('body').append(dancer.$node);
