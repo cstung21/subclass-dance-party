@@ -4,7 +4,7 @@ var makeSquidward = function(top, left, timeBetweenSteps = 500) {
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
   this.step();
-  this.$node = $('<img src="https://data.whicdn.com/images/209120463/original.gif" alt="squidward" class="dancer squidward"/>');
+  this.$node = $('<img src="https://data.whicdn.com/images/209120463/original.gif" alt="squidward" class="dancer squidward animated"/>');
   this.setPosition(top, left);
 };
 

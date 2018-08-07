@@ -2,6 +2,21 @@
 var makeDancer = function(top, left, timeBetweenSteps = 500) {
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+  $('.dancer').on('mouseover', function(event) {
+    $(this).animateCss('bounce');
+    
+  });
+  
+  $('.dancer').on('click', function(event) {
+    $(this).animateCss('shake');
+    
+  });
+  
+  $('.dancer').on('click', function(event) {
+  
+    
+  });
+  
   this.step;
   this.timeBetweenSteps = timeBetweenSteps;
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -38,3 +53,11 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.fadeOut = function() {
+  this.$node.addClass('fadeOutDown'); 
+};
+
+makeDancer.prototype.flip = function() {
+  this.$node.addClass('flip');
+}
