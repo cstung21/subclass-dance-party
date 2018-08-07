@@ -12,7 +12,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .moveToSide, .randomize{
   padding:5px 12px;
   float:right;
 }
@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
 
 
 }
-.squidward, .twerkBoy{
+.squidward, .twerkBoy, .minion{
   border: none;
   position: relative;
   height: 150px;
