@@ -84,43 +84,19 @@ $(document).ready(function() {
   
   $('.battleButton').on('click', function(event) {
     var offSet = 500;
-    var dancer1 = Math.floor(Math.random() * (window.dancers.length));
-    do { 
-      var dancer2 = Math.floor(Math.random() * (window.dancers.length));
-    } while (dancer2 === dancer1);
-    dancer1 = 1;
-    dancer2 = 2;
-    window.dancers[dancer1].setPosition(offSet, 500);
-    window.dancers[dancer2].setPosition(offSet, 550);
+
+    window.dancers[0].setPosition(offSet, 500);
+    window.dancers[1].setPosition(offSet, 550);
     
     for (let i = 0; i < window.dancers.length; i++) {
-      if (i !== dancer1 && i !== dancer2) {
+      if (i !== 0 && i !== 1) {
         window.dancers[i].fadeOut();
       }
     }
     
-    window.dancers[dancer1].flip();
-    window.dancers[dancer2].flip();
+    window.dancers[0].flip();
+    window.dancers[1].flip();
     
-    // var leftOffset = 100;
-    // var topOffset = 700;
-    // for (let i = 0; i < window.dancers.length; i++) {
-    //   if (i !== dancer1 && i !== dancer2) {
-    //     // if (i % 2 === 0) {
-    //       window.dancers[i].setPosition(topOffset, leftOffset);
-    //       // leftOffset+=40;
-    //       // var reset = 0;
-    //       // reset++
-    //     // } else {
-    //     //   window.dancers[i].setPosition(topOffset, 900);
-    //     //   reset++
-    //     // }
-    //     // if (reset === 2) {
-    //     //     topOffset+= 50;
-    //     //     reset = 0;
-    //     }
-    //   } 
-    // // }
   });
   
   
